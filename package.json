@@ -1,0 +1,31 @@
+{
+  "name": "babel-plugin-add-shopify-header",
+  "version": "1.0.0",
+  "description": "This plugin will add a standardized Shopify header to transpiled files",
+  "main": "index.js",
+  "license": "MIT",
+  "author": "Shopify Inc.",
+  "dependencies": {},
+  "devDependencies": {
+    "babel-cli": "^6.11.4",
+    "babel-core": "^6.13.2",
+    "babel-preset-es2015": "^6.13.2",
+    "babel-register": "^6.11.6",
+    "mocha": "^3.0.2"
+  },
+  "scripts": {
+    "test": "mocha --compilers js:babel-register test/index.js",
+    "prepublish": "babel -d lib/ src/"
+  },
+  "keywords": [
+    "shopify,babel,header,version,legal"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/shopify/babel-plugin-add-shopify-header.git"
+  },
+  "homepage": "https://github.com/shopify/babel-plugin-add-shopify-header",
+  "bugs": {
+    "url": "https://github.com/shopify/babel-plugin-add-shopify-header/issues"
+  }
+}
