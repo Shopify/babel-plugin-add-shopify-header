@@ -8,7 +8,7 @@ export default function() {
     const source = babel.transform('console.log("nom nom nom");', {
       plugins: [
         [pluginPath, {
-          header: 'Add this in'
+          header: 'Add this in',
         }],
       ],
     });
