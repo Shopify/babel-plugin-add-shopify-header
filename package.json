@@ -16,8 +16,16 @@
     "mocha": "^3.0.2"
   },
   "scripts": {
-    "test": "npm run lint-allow-warning && mocha --compilers js:babel-register test/index.js",
     "prepublish": "babel -d lib/ src/",
+    "test": "npm run lint-allow-warning && npm run mocha",
+    "mocha": "npm run prepublish && npm run test-build && mocha --compilers js:babel-register test/index.js && npm run test-clean",
+    "test-build": "npm run test-build-many-files && npm run test-build-many-files-add-to-header",
+    "test-clean": "npm run test-clean-many-files",
+    "test-clean2": "npm run test-clean-many-files && npm run test-clean-many-files-add-to-header",
+    "test-build-many-files": "BABEL_ENV=test-many-files babel test/to-transpile > test/out-test-many-files.js",
+    "test-clean-many-files": "rm test/out-test-many-files.js",
+    "test-build-many-files-add-to-header": "BABEL_ENV=test-many-files-add-header babel test/to-transpile > test/out-test-many-files-add-to-header.js",
+    "test-clean-many-files-add-to-header": "rm test/out-test-many-files-add-to-header.js",
     "lint": "eslint --max-warnings 0 -c .eslintrc.json src/ test/",
     "lint-allow-warning": "eslint -c .eslintrc.json src/ test/"
   },

@@ -1,3 +1,25 @@
 {
-  "presets": ["es2015"]
+  "presets": ["es2015"],
+  "env": {
+    "test-many-files": {
+      "plugins": [
+        ["./lib/index.js", {
+          "files": [ "test/to-transpile/b.js" ]
+        }]
+      ]
+    },
+    "test-many-files-add-header": {
+      "plugins": [
+        ["./lib/index.js", {
+          "files": { 
+            "test/to-transpile/b.js": {
+              "header": [
+                "Cookie monster"
+              ]
+            }
+          }
+        }]
+      ]
+    }
+  }
 }

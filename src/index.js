@@ -27,18 +27,20 @@ export default function(babel) {
       // to those files
       if (Array.isArray(opts.files)) {
         newFiles = opts.files.reduce((nFiles, file) => {
-          nFiles[file] = getDefaultHeader();
+          nFiles[file] = {};
+          nFiles[file].header = getDefaultHeader();
 
           return nFiles;
         }, {});
       // we'll assume files is an Object in which case we want to add the
       // default header to the those headers
       } else {
-        newFiles = Object.assign({}, newOpts.files);
+        newFiles = {};
 
         // loop through each file and prepend default headers to those files
         Object.keys(opts.files).forEach((keyFile) => {
-          newFiles[keyFile].header = getDefaultHeader().concat(newFiles[keyFile].header);
+          newFiles[keyFile] = {};
+          newFiles[keyFile].header = getDefaultHeader().concat(opts.files[keyFile].header);
         });
       }
 
