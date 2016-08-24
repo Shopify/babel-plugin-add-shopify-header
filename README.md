@@ -1,12 +1,39 @@
 # babel-plugin-add-shopify-header
 
-[![experimental](http://badges.github.io/stability-badges/dist/experimental.svg)](http://github.com/badges/stability-badges)
-
 This plugin will add a standardized Shopify comment header to transpiled files. Since transpiling via Babel is becoming one of the last steps of the build process it's handy to add some tooling around this final step.
 
 A standard Shopify Comment Header contains:
 - The license of the repo
 - Current version number derived from git tag or from `package.json` version and last git commit
+
+Example header:
+```
+/**
+* The MIT License (MIT)
+* Copyright (c) 2016 Shopify Inc.
+* 
+* Permission is hereby granted, free of charge, to any person obtaining a copy
+* of this software and associated documentation files (the "Software"), to deal
+* in the Software without restriction, including without limitation the rights
+* to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+* copies of the Software, and to permit persons to whom the Software is
+* furnished to do so, subject to the following conditions:
+* 
+* The above copyright notice and this permission notice shall be included in all
+* copies or substantial portions of the Software.
+* 
+* THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+* EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+* MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+* IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+* DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+* OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE
+* OR OTHER DEALINGS IN THE SOFTWARE.
+* 
+* 
+* Version: 1.0.0 Commit: 2b93ca3
+**/
+```
 
 This plugin is built ontop of [babel-plugin-add-header-comment](https://github.com/shopify/babel-plugin-add-header-comment).
 
@@ -22,7 +49,7 @@ This plugin is built ontop of [babel-plugin-add-header-comment](https://github.c
 - [Adding To Header From Contents Of File](adding-to-default-header-from-the-contents-of-another-file)
 - [Adding To Header From Script Execution](Adding To Default Header From A Script Execution)
 
-### Simple Example
+#### Simple Example
 The following is an example `.babelrc` file using this plugin:
 ```javascript
 {
@@ -33,7 +60,7 @@ The following is an example `.babelrc` file using this plugin:
 ```
 The above is useful when you just simply want to bundle one file and want to add the default Shopify header comment to that file.
 
-### Header Per File
+#### Header Per File
 If you are transpiling an entire folder and only want to add the comment header to one file (for instance `src/shopify.js`) do the following:
 ```javascript
 {
@@ -45,7 +72,7 @@ If you are transpiling an entire folder and only want to add the comment header 
 }
 ```
 
-### Adding To Default Header
+#### Adding To Default Header
 If you'd like to add to the default header you can do the following:
 ```javascript
 {
@@ -57,7 +84,7 @@ If you'd like to add to the default header you can do the following:
 }
 ```
 
-### Adding To Default Header Per File
+#### Adding To Default Header Per File
 The following will add to the default header on a per file basis
 ```javascript
 {
@@ -76,7 +103,7 @@ The following will add to the default header on a per file basis
 }
 ```
 
-### Adding To Default Header From The Contents Of Another File
+#### Adding To Default Header From The Contents Of Another File
 The following will show how to include the contents of the file `readFromThisFile.txt` under the default header. The `?` charachter denotes that the path following should be read in and added to the header.
 ```javascript
 {
@@ -88,7 +115,7 @@ The following will show how to include the contents of the file `readFromThisFil
 }
 ```
 
-### Adding To Default Header From A Script Execution
+#### Adding To Default Header From A Script Execution
 Lets say you had a Node script `getAdditionalContent.js` that produces output you'd like to add to the header you can do the following. The `!` denotes that the following script should be executed:
 ```javascript
 {
