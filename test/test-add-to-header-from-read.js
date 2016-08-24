@@ -10,6 +10,8 @@ export default function() {
       plugins: [
         [pluginPath, {
           header: `?${path.resolve(__dirname, 'toRead')}`,
+          version: '1.0.0',
+          commit: '2b93ca3',
         }],
       ],
     });

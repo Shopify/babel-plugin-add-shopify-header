@@ -7,7 +7,10 @@ export default function() {
 
     const source = babel.transform('console.log("nom nom nom");', {
       plugins: [
-        pluginPath,
+        [pluginPath, {
+          version: '1.0.0',
+          commit: '2b93ca3',
+        }]
       ],
     });
 

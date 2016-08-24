@@ -4,7 +4,9 @@
     "test-many-files": {
       "plugins": [
         ["./lib/index.js", {
-          "files": [ "test/to-transpile/b.js" ]
+          "files": [ "test/to-transpile/b.js" ],
+          version: '1.0.0',
+          commit: '2b93ca3',
         }]
       ]
     },
@@ -15,7 +17,9 @@
             "test/to-transpile/b.js": {
               "header": [
                 "Cookie monster"
-              ]
+              ],
+              version: '1.0.0',
+              commit: '2b93ca3',
             }
           }
         }]

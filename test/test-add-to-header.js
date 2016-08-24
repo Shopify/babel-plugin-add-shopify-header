@@ -9,6 +9,8 @@ export default function() {
       plugins: [
         [pluginPath, {
           header: 'Add this in',
+          version: '1.0.0',
+          commit: '2b93ca3',
         }],
       ],
     });

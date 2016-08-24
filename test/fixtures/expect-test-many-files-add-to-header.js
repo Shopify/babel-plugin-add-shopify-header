@@ -23,6 +23,7 @@
 * OR OTHER DEALINGS IN THE SOFTWARE.
 * 
 * 
+* Version: 1.0.0 Commit: 2b93ca3
 * Cookie monster
 **/"use strict";
 "I'm B";

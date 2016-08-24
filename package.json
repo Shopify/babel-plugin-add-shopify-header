@@ -5,7 +5,9 @@
   "main": "index.js",
   "license": "MIT",
   "author": "Shopify Inc.",
-  "dependencies": {},
+  "dependencies": {
+    "git-rev-sync": "^1.6.0"
+  },
   "devDependencies": {
     "babel-cli": "^6.11.4",
     "babel-core": "^6.13.2",

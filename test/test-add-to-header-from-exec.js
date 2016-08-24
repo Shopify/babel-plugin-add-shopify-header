@@ -10,6 +10,8 @@ export default function() {
       plugins: [
         [pluginPath, {
           header: `!node ${path.resolve(__dirname, 'toExec.js')}`,
+          version: '1.0.0',
+          commit: '2b93ca3',
         }],
       ],
     });
