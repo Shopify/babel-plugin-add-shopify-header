@@ -4,11 +4,11 @@ import getDefaultHeader from './get-default-header';
 import getPackageJSON from './get-package-json';
 
 /**
- * This babel plugin will append a default Shopify header to files defined (see README.md for examples). A default shopify 
+ * This babel plugin will append a default Shopify header to files defined (see README.md for examples). A default shopify
  * header consists of:
  * - license
  * - version number
- * 
+ *
  * @param  {Object} babel babel passes this bad boy in
  * @return {Object}       a babel plugin/visitor
  */
@@ -25,7 +25,7 @@ export default function(babel) {
       },
       state.opts
     );
-    
+
     // read in the package-json
     opts.packageJSON = getPackageJSON(opts);
 

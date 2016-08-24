@@ -11,13 +11,13 @@ export default (opts) => {
 
   const fileLicense = files.reduce((license, file) => {
     if (/license/.test(file.toLowerCase())) {
-      license = file;
+      return file;
     }
 
     return license;
-  });
+  }, null);
 
-  if(!fileLicense) {
+  if (!fileLicense) {
     throw new Error("Could not find a LICENSE file in the current working directory. You may need to pass in cwd through options for `add-shopify-header`");
   }
 
