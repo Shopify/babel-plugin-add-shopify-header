@@ -13,6 +13,7 @@ import getPackageJSON from './get-package-json';
  * @return {Object}       a babel plugin/visitor
  */
 export default function(babel) {
+  // get an instance of the `babel-plugin-add-header-comment`
   const plugin = pluginAddHeader(babel);
   const visitor = plugin.visitor;
   const ProgramOriginal = visitor.Program.bind(visitor);
