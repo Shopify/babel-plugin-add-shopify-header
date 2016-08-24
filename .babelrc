@@ -18,10 +18,10 @@
               "header": [
                 "Cookie monster"
               ],
-              version: '1.0.0',
-              commit: '2b93ca3',
             }
-          }
+          },
+          version: '1.0.0',
+          commit: '2b93ca3',
         }]
       ]
     }
