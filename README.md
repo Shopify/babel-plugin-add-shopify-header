@@ -133,15 +133,6 @@ The following are options you can pass this Babel plugin. All options are option
 - `cwd` - A String which is a path to the directory that contains a __LICENSE.md__ file and a __package.json__ file for your project. By default `process.cwd()` will be used.
 - `header` - An Array of strings which get appended to the standard header. This array can also contain strings starting with `'!'` or `'?'` which mean the string will not be appended but instead the string will be executed as a shell command (eg `'!node someScript.js'`) or the path will be read in (`?readInThisFile.md`)
 - `files` - An Array or Object that defines which files will receive the comment header. If the header does not need to be customized just pass in array of paths (eg. `"files": ["src/index.js", "src/index.polyfilled.js"]`) or if you need to customize the header per file pass in an Object which defines customized headers (eg. `"files": { "src/index.js": { 'A LINE ADDED TO HEADER'}}`)
-- `version` - A String that will override the current version number.
-- `commit` - A String that will override the current commit hash if you want to override the current git commit hash (probably never should do this).
-
-Since this plugin is built on top of [babel-plugin-add-header-comment](https://github.com/shopify/babel-plugin-add-header-comment) there are a few of options which can also be used here:
-- `newLineChar`- This is the newline char that should be used by the plugin. Default value: `'\n'`
-- `cache` - This is a string which represents what type of operations should be cached. For instance if you wanted to cache both read and command executions you could pass in `?!`. It should be noted in specific for this module the __LICENSE.md__ and __package.json__ file are already cached. Default value: `'?'`
-- `commentStart`- This is a string which describes how the comment is started/opened. For instance if you'd like you're comment to start with `/*COMMENT START` pass in `'COMMENT START'`. Default value: `'*\n'`
-- `commentEnd`- This is a string which describes how the comment is ended/closed. For example if you'd like your comment to end with `COMMENT END*/` pass in `'COMMENT END'`. Default value: `'\n*'`
-- `commentLineStart`- A string which is the leading charachter before a comment. Default value: `'* '`
 
 ## License
 
