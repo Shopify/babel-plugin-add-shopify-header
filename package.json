@@ -1,6 +1,6 @@
 {
   "name": "babel-plugin-add-shopify-header",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "This plugin will add a standardized Shopify comment header to transpiled files",
   "main": "lib/index.js",
   "license": "MIT",
