@@ -1,5 +1,6 @@
+import getVersion from 'get-project-version';
+
 import getLicense from './get-license';
-import getVersion from './get-version';
 
 let license;
 let version;
@@ -16,7 +17,10 @@ export default (opts) => {
     license = getLicense(opts);
 
     // create the version string
-    version = getVersion(opts);
+    version = getVersion({
+      tag: opts.version,
+      commit: opts.commit,
+    });
   }
 
   return [
