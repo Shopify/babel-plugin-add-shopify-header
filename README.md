@@ -37,9 +37,10 @@ Example header:
 
 This plugin is built ontop of [babel-plugin-add-header-comment](https://github.com/shopify/babel-plugin-add-header-comment).
 
-## Usage
-
-[![NPM](https://nodei.co/npm/babel-plugin-add-shopify-header.png)](https://www.npmjs.com/package/babel-plugin-add-shopify-header)
+## Installation
+```bash
+$ npm install babel-plugin-add-shopify-header
+```
 
 ## Example
 
@@ -137,3 +138,5 @@ The following are options you can pass this Babel plugin. All options are option
 ## License
 
 MIT, see [LICENSE.md](http://github.com/mikkoh/babel-plugin-add-shopify-header/blob/master/LICENSE.md) for details.
+
+<img src="https://cdn.shopify.com/shopify-marketing_assets/builds/19.0.0/shopify-full-color-black.svg" width="200" />
