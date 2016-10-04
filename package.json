@@ -7,8 +7,7 @@
   "author": "Shopify Inc.",
   "dependencies": {
     "babel-plugin-add-header-comment": "~1.0.0",
-    "get-project-version": "~1.0.0",
-    "git-rev-sync": "~1.6.0"
+    "get-project-version": "~1.0.0"
   },
   "devDependencies": {
     "babel-cli": "~6.11.4",
@@ -20,7 +19,7 @@
     "mocha": "~3.0.2"
   },
   "scripts": {
-    "prepublish": "babel -d lib/ src/",
+    "prepublish": "rm -rf lib/; babel -d lib/ src/",
     "test": "npm run lint-allow-warning && npm run mocha",
     "mocha": "npm run prepublish && npm run test-build && mocha --compilers js:babel-register test/index.js && npm run test-clean",
     "test-build": "npm run test-build-many-files && npm run test-build-many-files-add-to-header",
