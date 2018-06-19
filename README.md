@@ -1,3 +1,5 @@
+[![Travis](https://travis-ci.com/Shopify/babel-plugin-add-shopify-header.svg?branch=master)](https://travis-ci.com/Shopify/babel-plugin-add-shopify-header)
+
 # babel-plugin-add-shopify-header
 
 This plugin will add a standardized Shopify comment header to transpiled files. Since transpiling via Babel is becoming one of the last steps of the build process it's handy to add some tooling around this final step.
